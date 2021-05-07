@@ -9,6 +9,11 @@ app.get('/', function (req, res) {
     res.send('Welcome to the main page!');
 });
 
+app.get('/random-gen', function (req, res) {
+    res.type('Here is your random number: ', math.floor(math.random() * 10000));
+    res.send('Welcome to the other page!');
+});
+
 app.get('/other-page', function (req, res) {
     res.type('text/plain');
     res.send('Welcome to the other page!');
