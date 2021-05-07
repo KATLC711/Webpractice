@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/random-gen', function (req, res) {
-    res.type('Here is your random number: ', math.floor(math.random() * 10000));
+    res.type('Here is your random number: ', Math.floor(Math.random() * 10000));
     res.send('Welcome to the other page!');
 });
 
@@ -18,6 +18,7 @@ app.get('/other-page', function (req, res) {
     res.type('text/plain');
     res.send('Welcome to the other page!');
 });
+
 
 app.use(function (req, res) {
     res.type('text/plain');
