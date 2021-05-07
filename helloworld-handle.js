@@ -1,5 +1,5 @@
 var express = require('express');
-var handlebars = require('express-handlebars')
+var handlebars = require('express-handlebars');
 
 var app = express();
 
