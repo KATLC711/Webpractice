@@ -3,11 +3,11 @@ var express = require('express');
 var app = express();
 var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 
-/*
+
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());*/
+app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -45,7 +45,7 @@ app.get('/get-loopback-improved', function (req, res) {
     res.render('get-loopback-improved', context);
 });
 
-/*
+
 app.post('/post-loopback', function (req, res) {
     var qParams = [];
     for (var p in req.body) {
@@ -57,7 +57,7 @@ app.post('/post-loopback', function (req, res) {
     context.dataList = qParams;
     res.render('post-loopback', context);
 });
-*/
+
 
 
 app.use(function (req, res) {
