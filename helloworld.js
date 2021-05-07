@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 app.get('/rand-gen', function (req, res) {
     res.type('text/plain');
-    res.send('Here is your random number: ', Math.floor(Math.random() * 10000));
+    res.send('Here is your random number: ' + Math.floor(Math.random() * 10000));
 });
 
 app.get('/other-page', function (req, res) {
