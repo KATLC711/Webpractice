@@ -11,8 +11,16 @@ app.get('/', function (req, res) {
     res.render('home.handlebars') //We can omit the .handlebars extension as we do below
 });
 
-app.get('/other-page', function (req, res) {
-    res.render('other-page');
+
+function genContext() {
+    var stuffToDisplay = {};
+    stuffToDisplay.time = (new Date(Date.now())).toLocaleTimeString('en-US');
+    return stuffToDisplay;
+}
+
+
+app.get('/time', function (req, res) {
+    res.render('clock', genContext());
 });
 
 app.use(function (req, res) {
