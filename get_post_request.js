@@ -1,7 +1,7 @@
 var express = require('express');
 
 var app = express();
-var handlebars = require('express-handlebars').create({ defaultLayout: 'get_post_main' });
+var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 
 
 var bodyParser = require('body-parser');
