@@ -33,17 +33,14 @@ app.get('/', function (req, res) {
 app.get('/get-request', function (req, res) {
 
 
-
-    context = {
-        'greet': 'GET Request Received',
-    }
-
-    var qParams = [];
+    var qParams = "";
     for (var p in req.query) {
-        qParams.push({ 'name': p, 'value': req.query[p] })
+        qParams += "The name " + p + " contains the value " + req.query[p] + ", ";
     }
+    qParams = qParams.substring(0, qParams.lastIndexOf(','));
+    qParams += '.';
     var context = {};
-    context = qParams;
+    context.dataList = qParams;
 
     res.render('getrequest', context);
 });
