@@ -68,6 +68,14 @@ app.post('/post-request', function (req, res) {
 
 
 
+
+document.getElementById('post-personal').addEventListener('click', function (event) {
+
+});
+
+
+
+
 app.listen(app.get('port'), function () {
     console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
