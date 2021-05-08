@@ -60,7 +60,7 @@ app.post('/post-request', function (req, res) {
     context.name = req.body.name;
     context.location = req.body.location;
     context.color = req.body.color;
-    context.postd = req.query.postd
+    context.postq = req.query.postq;
 
     res.render('postrequest', context);
 });
