@@ -35,7 +35,7 @@ app.get('/get-request', function (req, res) {
     context = []
 
     for (var p in req.query) {
-        context.push({ 'name': p, 'value': req.body[p] })
+        console.log({ 'name': p, 'value': req.body[p] })
     }
 
     res.render('getrequest', context);
