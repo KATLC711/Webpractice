@@ -37,7 +37,7 @@ app.get('/get-request', function (req, res) {
     }
 
     for (var p in req.query) {
-        console.log({ 'name': p, 'value': req.body[p] })
+        console.log({ 'name': p, 'value': req.query[p] })
     }
 
     res.render('getrequest', context);
