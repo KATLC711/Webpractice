@@ -31,14 +31,6 @@ app.get('/', function (req, res) {
 
 
 
-document.getElementById('personal').addEventListener('click', function (event) {
-    var req = new XMLHttpRequest();
-    var name = document.getElementById('name').value;
-    var location = document.getElementById('location').value;
-    req.open('GET', 'http://flip1.engr.oregonstate.edu:3221/?name=' + zip + '&location=' + location, true);
-    req.send(null);
-    event.preventDefault();
-});
 
 
 
