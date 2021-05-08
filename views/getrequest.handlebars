@@ -12,20 +12,13 @@
         </tr>
     </thead>
     <tbody>
+        {{#each dataList}}
         <tr>
-            {{#each dataList}}
+
             <td>{{this.name}}</td>
             <td>{{this.value}}</td>
-            {{/each}}
         </tr>
+        {{/each}}
     </tbody>
 
 </table>
-
-
-
-<ul>
-    {{#each dataList}}
-    <li>{{this.name}} : {{this.value}}</li>
-    {{/each}}
-</ul>
