@@ -32,13 +32,10 @@ app.get('/', function (req, res) {
 
 app.get('/get-request', function (req, res) {
 
-
-    var qParams = "";
+    var qParams = [];
     for (var p in req.query) {
-        qParams += "The name " + p + " contains the value " + req.query[p] + ", ";
+        qParams.push({ 'name': p, 'value': req.query[p] })
     }
-    qParams = qParams.substring(0, qParams.lastIndexOf(','));
-    qParams += '.';
     var context = {};
     context.dataList = qParams;
 
