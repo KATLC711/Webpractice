@@ -29,11 +29,6 @@ app.get('/', function (req, res) {
 });
 
 
-document.getElementById('personal').addEventListener('click', function (event) {
-    var req = new XMLHttpRequest();
-
-});
-
 
 
 
