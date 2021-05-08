@@ -25,11 +25,14 @@ app.get('/', function (req, res) {
         'time': get_time(),
         'greet': "Kevin Cheung - Assignment 5"
     }
-
     res.render('home', context);
 });
 
 
+document.getElementById('personal').addEventListener('click', function (event) {
+    var req = new XMLHttpRequest();
+
+});
 
 
 
