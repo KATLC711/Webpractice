@@ -30,6 +30,31 @@ app.get('/', function (req, res) {
 });
 
 
+
+document.getElementById('personal').addEventListener('click', function (event) {
+    var req = new XMLHttpRequest();
+    var name = document.getElementById('name').value;
+    var location = document.getElementById('location').value;
+    req.open('GET', 'http://flip1.engr.oregonstate.edu:3221/?name=' + zip + '&location=' + location, true);
+    req.addEventListener('load', function () {
+        if (req.status >= 200 && req.status < 400) {
+
+
+        } else {
+
+
+        }
+    });
+    req.send(null);
+    event.preventDefault();
+});
+
+
+
+
+
+
+
 app.listen(app.get('port'), function () {
     console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
