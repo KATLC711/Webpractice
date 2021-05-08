@@ -42,6 +42,8 @@ app.get('/get-request', function (req, res) {
     context.name = req.query.name;
     context.location = req.query.location;
     context.color = req.query.color;
+    context.school = req.query.school;
+    context.major = req.query.major;
 
     res.render('getrequest', context);
 });
