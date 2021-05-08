@@ -60,18 +60,12 @@ app.post('/post-request', function (req, res) {
     context.name = req.body.name;
     context.location = req.body.location;
     context.color = req.body.color;
-    context.postq = req.query.postq;
+    context.school = req.query.school;
+    context.major = req.query.major;
 
     res.render('postrequest', context);
 });
 
-
-
-
-
-document.getElementById('post-personal').addEventListener('click', function (event) {
-
-});
 
 
 

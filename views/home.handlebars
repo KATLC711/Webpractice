@@ -15,6 +15,8 @@
             <input type="text" name="name" id="name" placeholder="What is your name?">
             <label for="location"></label>
             <input type="text" name="location" id="location" placeholder="Where do you live?">
+            <input type="text" name="school" id="school" placeholder="Which school do you go to?">
+            <input type="text" name="major" id="major" placeholder="What are your major?">
             <legend>Favourite Color:</legend>
             <label for="color"> <input type="radio" name="color" value="Red"> Red </label>
             <label for="color"> <input type="radio" name="color" value="Blue"> Blue </label>
@@ -29,7 +31,7 @@
 
 <div>
     <h2>POST Request Form</h2>
-    <form action="http://flip1.engr.oregonstate.edu:3221/post-request?postq=123" method="POST">
+    <form action="http://flip1.engr.oregonstate.edu:3221/post-request?school=OSU&major=ComputerScience" method="POST">
         <fieldset>
             <legend>Personal Info</legend>
             <label for="name"></label>
