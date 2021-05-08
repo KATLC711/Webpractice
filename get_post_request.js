@@ -32,9 +32,11 @@ app.get('/', function (req, res) {
 
 app.get('/get-request', function (req, res) {
 
+    var req_name = req.query[name]
+
     context = {
         'greet': 'GET Request Received',
-        'name': req.query[name]
+        'name': req_name
     }
 
     for (var p in req.query) {
