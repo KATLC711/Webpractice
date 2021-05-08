@@ -40,6 +40,8 @@ app.get('/get-request', function (req, res) {
     context.dataList = qParams;
 
     context.name = req.query.name;
+    context.location = req.query.location;
+    context.color = req.query.color;
 
     res.render('getrequest', context);
 });
