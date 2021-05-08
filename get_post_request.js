@@ -37,7 +37,7 @@ app.get('/get-request', function (req, res) {
         qParams.push({ 'name': p, 'value': req.query[p] })
     }
     var context = {};
-    context = qParams;
+    context.dataList = qParams;
 
     res.render('getrequest', context);
 });

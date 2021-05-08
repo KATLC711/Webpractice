@@ -1,2 +1,7 @@
-{{name}}
-{{location}}
+<h1>GET Request Received</h1>
+
+<ul>
+    {{#each dataList}}
+    <li>{{this.name}} : {{this.value}}</li>
+    {{/each}}
+</ul>
