@@ -32,16 +32,18 @@ app.get('/', function (req, res) {
 
 app.get('/get-request', function (req, res) {
 
-    var req_name = req.query[name]
+
 
     context = {
         'greet': 'GET Request Received',
-        'name': req_name
     }
 
+    var qParams = [];
     for (var p in req.query) {
-        console.log({ 'name': p, 'value': req.query[p] })
+        qParams.push({ 'name': p, 'value': req.query[p] })
     }
+    var context = {};
+    context = qParams;
 
     res.render('getrequest', context);
 });
