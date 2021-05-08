@@ -33,10 +33,9 @@ app.get('/', function (req, res) {
 app.get('/get-request', function (req, res) {
 
     var context = {
-        'time': get_time(),
         'greet': "GET Request Received"
     }
-    res.render('home', context);
+    res.render('getrequest', context);
 });
 
 
