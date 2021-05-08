@@ -48,6 +48,24 @@ app.get('/get-request', function (req, res) {
 
 
 
+app.post('/post-request', function (req, res) {
+    var qParams = [];
+    for (var p in req.body) {
+        qParams.push({ 'name': p, 'value': req.body[p] })
+    }
+    console.log(qParams);
+    console.log(req.body);
+    var context = {};
+    context.dataList = qParams;
+
+    context.name = req.query.name;
+    context.location = req.query.location;
+    context.color = req.query.color;
+
+    res.render('postrequest', context);
+});
+
+
 
 
 
