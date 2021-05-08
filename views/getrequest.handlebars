@@ -3,6 +3,27 @@
 <h2>Your name is {{name}}. You live in {{location}}. Your favourite color is : {{color}} </h2>
 
 <h3>Here are your parameters.</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Parameter Name</th>
+            <th>Parameter Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {{#each dataList}}
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+
+</table>
+
+
+
 <ul>
     {{#each dataList}}
     <li>{{this.name}} : {{this.value}}</li>
